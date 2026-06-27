@@ -1,4 +1,3 @@
-    <style>
         * {
             margin: 0;
             padding: 0;
@@ -34,7 +33,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #1a73e8;
+            color: #484b4e;
             text-decoration: none;
         }
 
@@ -60,7 +59,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            background: linear-gradient(135deg, #454a51 0%, #959ba3 100%);
             color: white;
             padding: 160px 20px 100px;
             text-align: center;
@@ -178,7 +177,7 @@
         }
 
         .submit-btn {
-            background-color: #1a73e8;
+            background-color: #333539;
             color: white;
             border: none;
             padding: 12px 20px;
@@ -187,11 +186,11 @@
             cursor: pointer;
             width: 100%;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: 0.3s;
         }
 
         .submit-btn:hover {
-            background-color: #0d47a1;
+            background-color: #3f4245;
         }
 
         /* Footer */
@@ -215,4 +214,33 @@
                 font-size: 32px;
             }
         }
-    </style>
+/* Media Section Container */
+.media-container {
+    display: flex;
+    align-items: center;      /* Vertically aligns items in the center */
+    justify-content: center;  /* Horizontally centers the entire block */
+    width: 100%;
+    max-width: 1000px;        /* Limits total width on large screens */
+    margin: 40px auto;        /* Margins: 40px top/bottom, auto centers the container */
+    gap: 40px;                /* Modern way to handle spacing between columns cleanly */
+}
+
+/* Styling for both media elements */
+.media-item {
+    flex: 1;                  /* Forces both columns to be equal width */
+    width: 100%;              /* Allows the element to scale properly inside the flex item */
+    height: auto;             /* Maintains aspect ratio */
+    border-radius: 8px;       /* Optional: rounds the corners */
+    object-fit: cover;        /* Prevents distortion if elements have mismatched aspect ratios */
+}
+
+/* Responsive design for smaller mobile screens */
+@media (max-width: 768px) {
+    .media-container {
+        flex-direction: column; /* Stacks items vertically on mobile */
+        gap: 20px;   }           
+    
+    .media-item {
+        width: 100%;           /* Elements take up full screen width */
+    }
+}
